@@ -37,7 +37,9 @@ dotnet build
 dotnet run --project src\CalculatesCapitalGain
 ```
 
-## Attention!
-To test the program by pasting the json, it cannot have line breaks. See the example below
+```bash
+# Attention!
+o test the program by pasting the json, it cannot have line breaks. See the example below
 
 [{ "operation": "buy", "unit-cost": 10.00, "quantity": 10000}, { "operation": "sell", "unit-cost": 20.00, "quantity": 5000 }, { "operation": "buy", "unit-cost": 20.00, "quantity": 10000 }, { "operation": "sell", "unit-cost": 10.00, "quantity": 5000}]]
+```
