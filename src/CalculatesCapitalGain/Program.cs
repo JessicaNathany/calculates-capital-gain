@@ -1,7 +1,6 @@
 ﻿using CalculatesCapitalGain.Dtos;
 using CalculatesCapitalGain.Services;
 using Newtonsoft.Json;
-using Microsoft.Extensions.DependencyInjection;
 public class Program
 {
     public static  void Main(string[] args)

@@ -2,17 +2,17 @@
 
 namespace CalculatesCapitalGain.Dtos
 {
-    public class TaxDto
+    public class FeeDto
     {
         [JsonProperty("tax")]
         public decimal Tax { get; set; }
 
-        public TaxDto()
+        public FeeDto()
         {
             Tax = 0;
         }
 
-        public TaxDto(decimal tax)
+        public FeeDto(decimal tax)
         {
             Tax = tax;
         }

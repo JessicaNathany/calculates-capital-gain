@@ -11,13 +11,13 @@
             WeightedAverage = ((TotalOfStocks * WeightedAverage) + (unitCost * quantityOfSharesTraded)) / (TotalOfStocks + quantityOfSharesTraded);
         }
 
-        public async Task<Taxation> BuyStockAsync(decimal unitCost, int quantityOfSharesTraded)
+        public async Task<Fee> BuyStockAsync(decimal unitCost, int quantityOfSharesTraded)
         {
             CalcWeightedAverageAsync(unitCost, quantityOfSharesTraded);
 
             TotalOfStocks += quantityOfSharesTraded;
 
-            return new Taxation();
+            return new Fee();
         }
 
         public async Task<decimal> CalculateProfitAsync(decimal unitCost, decimal quantity)
@@ -40,9 +40,9 @@
             return unitCost * quantity;
         }
 
-        public async Task<Taxation> SellStockAsync(decimal unitCost, int quantity)
+        public async Task<Fee> SellStockAsync(decimal unitCost, int quantity)
         {
-            var tax = new Taxation();
+            var tax = new Fee();
 
             TotalOfStocks -= quantity;
 
