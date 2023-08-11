@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CalculatesCapitalGain.Tests
-build_property.ProjectDir = C:\GitHub\calculates-capital-gain\tests\CalculatesCapitalGain\
+build_property.ProjectDir = c:\GitHub\calculates-capital-gain\tests\CalculatesCapitalGain\
