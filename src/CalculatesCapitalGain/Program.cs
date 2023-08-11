@@ -21,8 +21,5 @@ public class Program
 
             Console.WriteLine(JsonConvert.SerializeObject(taxes));
         }
-
-        Console.WriteLine("...END...");
     }
-    
 }

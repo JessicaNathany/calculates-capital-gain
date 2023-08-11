@@ -7,12 +7,12 @@ namespace CalculatesCapitalGain.Services
     {
         public static async Task<List<TaxDto>> CalculateTaxesAsync(IList<OrderDto> orders)
         {
-            var wallet = new Wallet();
+            var wallet = new OrderProcesser();
             var taxes = new List<TaxDto>();
 
             foreach (var order in orders)
             {
-                Tax tax;
+                Taxation tax;
 
                 if (order.Operation == "buy") 
                 {
@@ -29,7 +29,7 @@ namespace CalculatesCapitalGain.Services
             return taxes;
         }
 
-        private static TaxDto UpdateTaxe(Tax tax)
+        private static TaxDto UpdateTaxe(Taxation tax)
         {
             return new TaxDto(tax.TaxValue);
         }

@@ -1,6 +1,6 @@
 ﻿namespace CalculatesCapitalGain.Entity
 {
-    public class Wallet
+    public class OrderProcesser
     {
         public int TotalOfStocks { get; set; }
         public decimal WeightedAverage { get; set; }
@@ -11,13 +11,13 @@
             WeightedAverage = ((TotalOfStocks * WeightedAverage) + (unitCost * quantityOfSharesTraded)) / (TotalOfStocks + quantityOfSharesTraded);
         }
 
-        public async Task<Tax> BuyStockAsync(decimal unitCost, int quantityOfSharesTraded)
+        public async Task<Taxation> BuyStockAsync(decimal unitCost, int quantityOfSharesTraded)
         {
             CalcWeightedAverageAsync(unitCost, quantityOfSharesTraded);
 
             TotalOfStocks += quantityOfSharesTraded;
 
-            return new Tax();
+            return new Taxation();
         }
 
         public async Task<decimal> CalculateProfitAsync(decimal unitCost, decimal quantity)
@@ -40,9 +40,9 @@
             return unitCost * quantity;
         }
 
-        public async Task<Tax> SellStockAsync(decimal unitCost, int quantity)
+        public async Task<Taxation> SellStockAsync(decimal unitCost, int quantity)
         {
-            var tax = new Tax();
+            var tax = new Taxation();
 
             TotalOfStocks -= quantity;
 

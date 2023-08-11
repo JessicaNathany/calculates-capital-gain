@@ -1,6 +1,6 @@
 ﻿namespace CalculatesCapitalGain.Entity
 {
-    public class Tax
+    public class Taxation
     {
         public const decimal MAX_TAX_INCOME = 20000;
         public const decimal TAX = 0.2M; 
@@ -10,7 +10,7 @@
         {
             TaxValue = 0;
 
-            if (totalOperation > Tax.MAX_TAX_INCOME)
+            if (totalOperation > Taxation.MAX_TAX_INCOME)
             {
                 TaxValue = profit * TAX;
             }

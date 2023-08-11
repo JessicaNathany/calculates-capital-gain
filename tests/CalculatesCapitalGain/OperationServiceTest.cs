@@ -17,7 +17,8 @@ namespace CalculatesCapitalGain.Tests
 
             var resultTaxes = await OperationOrderService.CalculateTaxesAsync(orders);
 
-           
+            //[{"tax":0.0}, {"tax": 10000.000}, {"tax": 0.0}, {"tax": 0.0}]
+
             Assert.NotNull(resultTaxes);
             //Assert.Equal(0, resultTaxes.Count() == 0)
             Assert.Equal(4, resultTaxes.Count); 
